@@ -1,0 +1,435 @@
+@import "normalize.scss"
+@import "resets.scss"
+
+*
+    box-sizing: border-box
+
+@font-face
+    font-family: "Gilroy-Medium"
+    src: local('Gilroy-Medium')
+    src: url('../fonts/Gilroy-Medium.ttf')
+
+@font-face
+    font-family: "Gilroy-Bold"
+    src: local('Gilroy-Bold')
+    src: url("../fonts/Gilroy-Bold.ttf")
+
+.container
+    max-width: 940px
+    margin: auto
+
+h1
+    font-family: 'Gilroy-Bold'
+
+.nav
+    margin-bottom: 40px
+    &__list
+        min-height: 88px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid #828282
+    &__link
+        text-decoration: none
+        font-family: 'Gilroy-Bold'
+        font-size: 18px
+        line-height: 22px
+        color: #828282
+        &:hover
+            color: #070707
+
+.header
+    margin-bottom: 104px
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        margin-bottom: 50px
+    &__title
+        font-family: 'Gilroy-Bold'
+        font-size: 47px
+        color: #070707
+    &__text
+        margin-right: 40px
+    &__lang-switch
+        position: relative
+        transform: rotate(0.75turn)
+        min-height: 68px
+        width: 68px
+    &__image-small
+        display: none
+
+.about-me
+    background: #F6F6F6
+    margin-bottom: 91px
+    &__container
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        padding-top: 120px
+        margin-bottom: 18px
+    &__text
+        margin-bottom: 38px
+        &:last-child
+            margin-bottom: 107px
+
+.skills
+    &__title
+        margin-bottom: 69px
+    &__text
+        margin-bottom: 83px
+    &__gallery
+        margin-bottom: 111px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        flex-flow: wrap
+
+.portfolio
+    background: #F6F6F6
+    padding-top: 120px
+    margin-bottom: 114px
+    &__title
+        margin-bottom: 45px
+    &__card
+        display: flex
+        flex-direction: column
+        &:last-child
+            margin-bottom: 0
+    &__image
+        margin-bottom: 45px
+    &__link
+        text-align: center
+        font-family: 'Gilroy-Medium'
+        font-size: 18px
+        line-height: 22px
+        text-align: center
+        text-decoration-line: underline
+        color: #070707
+        &:last-child
+            margin-bottom: 96px
+
+.footer
+    &__container
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        margin-bottom: 20px
+    &__text
+        margin-bottom: 30px
+    &__button
+        margin-bottom: 87px
+    &__social-links
+        margin-bottom: 45px
+    &__caption
+        text-align: center
+        margin-bottom: 123px
+    &__social-links
+        display: flex
+    &__item
+        margin-right: 61px
+        &:last-child
+            margin-right: 0
+    &__caption
+        font-family: 'Gilroy-Medium'
+        font-size: 14px
+        line-height: 17px
+        text-align: center
+        color: #828282
+
+.title-secondary
+    font-family: 'Gilroy-Bold'
+    font-size: 34px
+    line-height: 42px
+    text-align: center
+    color: #070707
+
+.text
+    font-family: 'Gilroy-Medium'
+    font-size: 18px
+    line-height: 22px
+    text-align: center
+    color: #070707
+
+.burger
+    width: 33px
+    display: none
+    cursor: pointer
+    &__span
+        display: block
+        height: 3.8px
+        background: #000000
+        margin-bottom: 5px
+        &:last-child
+            margin-bottom: 0
+    &__list
+
+.switcher
+    display: none
+    width: 150px
+    height: 150px
+    background: red
+    &__span
+        position: absolute
+        z-index: 12
+        top: 70px
+        right: 30px
+        width: 27px
+        height: 3.8px
+        background: #828282
+        transform: rotate(-45deg)
+        &:last-child
+            transform: rotate(45deg)
+
+.lang-switch
+    &__label
+        border-left: 3px Black solid
+        padding-left: 5px
+        color: #828282
+        cursor: pointer
+        &:hover
+            color: #000000
+        &:first-child
+            border-left: none
+    &__input
+        display: none
+    &_desktop
+        margin-right: -30px
+        margin-bottom: 28px
+        width: fit-content
+        transform: rotate(0.75turn)
+    &_mobile
+        display: none
+
+.button
+    border-radius: 35px
+    background: #070707
+    padding: 6px 30px
+    font-family: 'Gilroy-Bold'
+    font-size: 18px
+    line-height: 22px
+    text-align: center
+    color: #FFFFFF
+    border: none
+    cursor: pointer
+    &:hover
+        background: white
+        border: solid 1px black
+        color: #070707
+        transform: scale(1.05)
+        transition: transform .5s
+
+.modal
+    display: none
+    z-index: 2
+    position: fixed
+    border-radius: 35px
+    border: solid 1px black
+    padding: 40px 20px
+    max-width: fit-content
+    background: white
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.layer
+    display: none
+    position: fixed
+    top: 0
+    background-color: black
+    opacity: .5
+    z-index: 1
+    width: 100vw
+    height: 100vh
+
+    //Обычный desktop сайт
+@media (max-width: 1200px)
+    // .container
+    //     Width: 1140px
+
+//Малый комп или горизонтальный планшет
+@media (max-width: 1199px)
+    // .container
+    //     Width: 960px
+
+//Вертикальный планшет
+@media (max-width: 991px)
+    .container
+        width: 720px
+
+    .nav
+        display: block
+
+    .header
+        &__image
+            max-width: 720px
+
+    .skills
+        &__title
+            margin-bottom: 50px
+
+//Горизонтальный телефон
+@media (max-width: 767px)
+    .container
+        width: 540px
+
+    .header
+        padding-top: 60px
+
+    .nav
+        display: none
+        position: fixed
+        background: white
+        padding-top: 66px
+        z-index: 10
+        top: 0
+        left: 0
+        width: 100%
+        height: 100vh
+        &__container_mobile
+            max-width: 85%
+        &__list_mobile
+            display: block
+            border: 0
+        &__item_mobile
+            margin-bottom: 68px
+        &__link_mobile
+            font-family: 'Gilroy-Bold'
+            font-size: 34px
+            line-height: 42px
+
+    .header
+        &__top
+            align-items: flex-start
+        &__text
+            display: none
+        &__image
+            max-width: 540px
+        &__lang-switch
+            display: none
+
+    .skills
+        &__gallery
+            max-width: 540px
+            justify-content: space-evenly
+        &__img
+            padding-left: 25px
+            margin: 0 25px 45px 0px
+
+    .lang-switch_desktop
+        display: none
+
+    .burger
+        display: block
+
+    .switcher
+        display: block
+        position: absolute
+        top: 70px
+        right: 28px
+        width: 23px
+        height: 23px
+        font-size: 40px
+        text-align: center
+        line-height: 0.6
+        color: #828282
+        background: white
+        cursor: pointer
+
+    .lang-switch_mobile
+        display: block
+        position: absolute
+        right: -21px
+        bottom: 12%
+        font-family: 'Gilroy-Bold'
+        font-size: 34px
+        line-height: 42px
+        transform: rotate(90deg)
+
+//Вертикальный телефон
+@media (max-width: 575px)
+    .container
+        max-width: 316.5px
+
+    .nav
+        position: fixed
+        background: white
+        padding-top: 66px
+        z-index: 10
+        top: 0
+        left: 0
+        max-width: 100%
+        width: 542px
+        height: 100vh
+        &__container_mobile
+            max-width: 85%
+        &__list_mobile
+            display: block
+            border: 0
+        &__item_mobile
+            margin-bottom: 68px
+        &__link_mobile
+            font-family: 'Gilroy-Bold'
+            font-size: 34px
+            line-height: 42px
+
+    .header
+        &__top
+            flex-direction: row
+            align-items: flex-start
+        &__title
+            margin-bottom: 23px
+        &__text
+            text-align: left
+            margin-bottom: 39px
+            margin-bottom: 0
+        &__lang-switch
+            display: none
+        &__image
+            display: none
+        &__image-small
+            display: block
+            width: 100%
+            height: 478px
+
+    .skills
+        &__gallery
+            flex-direction: column
+            justify-content: space-evenly
+            align-items: center
+        &__item
+            padding: 0
+            &:last-child
+                margin-bottom: 0
+
+    .portfolio
+        padding-top: 81px
+        &__card
+            margin-bottom: 0
+        &__title
+            margin-bottom: 64px
+        &__image
+            margin-bottom: 33px
+
+    .footer
+        &__button
+            width: 100%
+            margin-bottom: 48px
+            cursor: pointer
+        &__social-links
+            width: 100%
+            cursor: pointer
+        &__social-links
+            display: flex
+            justify-content: space-between
+        &__item
+            margin-right: 0
+        &__caption
+            font-size: 18px
+            line-height: 22px
+            max-width: 315px
+
+    .breaker
+        display: none
